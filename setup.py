@@ -16,12 +16,11 @@ setup(
     long_description_content_type='text/markdown',
     license='BSD, see LICENSE file.',
     install_requires=[
-        "django-mapstore-adapter >= 1.0.9",
+        "django-mapstore-adapter < 2.0.0",
     ],
 
     # adding packages
     packages=find_packages(),
-
     # trying to add files...
     include_package_data = True,
     package_data = {
@@ -32,5 +31,15 @@ setup(
         'templates': ['*.*'],
     },
     zip_safe = False,
-    classifiers  = [],
+    classifiers=[
+        'Development Status :: 5 - Production/Stable',
+        'Framework :: Django',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: BSD License',
+        'Operating System :: OS Independent',
+        'Topic :: Internet :: WWW/HTTP',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
+    ],
 )

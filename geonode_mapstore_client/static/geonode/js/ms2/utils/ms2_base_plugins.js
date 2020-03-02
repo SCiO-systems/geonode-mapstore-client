@@ -97,7 +97,8 @@ var MS2_BASE_PLUGINS = {
 		{
 			"name": "Print",
 			"cfg": {
-				"useFixedScales": true
+				"useFixedScales": true,
+				"mapWidth": 256
 			}
 		},
 		{

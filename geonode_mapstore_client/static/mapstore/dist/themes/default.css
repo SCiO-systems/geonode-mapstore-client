@@ -14515,3 +14515,34 @@ Ported to CodeMirror by Peter Kroon
 .msgapi .timeline-plugin {
   position: fixed !important;
 }
+.msgapi #mapstore-print-panel.modal-dialog,
+.msgapi #measure-dialog,
+.msgapi #mapstore-about {
+  height: 400px;
+  width: 800px;
+  position: absolute;
+}
+.msgapi #mapstore-print-panel .modal-body {
+  max-height: calc(100vh - 190px);
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+  height: calc(100% - 52px);
+}
+.msgapi .print-map-preview #print_preview {
+  margin: auto;
+}
+@media (max-width: 991px) {
+  .msgapi #mapstore-print-panel.modal-dialog,
+  .msgapi #measure-dialog,
+  .msgapi #mapstore-about {
+    width: 700px;
+  }
+}
+@media (max-width: 767px) {
+  .msgapi #mapstore-print-panel.modal-dialog,
+  .msgapi #measure-dialog,
+  .msgapi #mapstore-about {
+    width: 98%;
+  }
+}

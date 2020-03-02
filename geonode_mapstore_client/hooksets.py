@@ -36,7 +36,7 @@ class MapStoreHookSet(GeoExtHookSet):
             user["role"] = [group.name for group in _u.groups.all()]
             if _u.is_superuser:
                 user["role"] = "ADMIN"
-            if _u.is_authenticated():
+            if _u.is_authenticated:
                 user["enabled"] = True
         return json.dumps(user)
 
