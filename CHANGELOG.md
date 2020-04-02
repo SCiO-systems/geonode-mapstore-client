@@ -1,5 +1,19 @@
 # Change Log
 
+## 2.0.3 [2020-04-02]
+
+### Main features
+
+- Install `pip install django-mapstore-adapter==2.0.3` instructions [Here](https://pypi.org/project/django-mapstore-adapter/)
+- Install `pip install django-geonode-mapstore-client==2.0.2` instructions [Here](https://pypi.org/project/django-geonode-mapstore-client/2.0.2/)
+- Based on [GeoNode MapStore Adapter v2.0.2](https://github.com/GeoNode/django-mapstore-adapter/releases/tag/2.0.2)
+- Based on [MapStore2 - v2020.01.01](https://github.com/geosolutions-it/MapStore2/releases/tag/v2020.01.01)
+
+[Full Changelog](https://github.com/GeoNode/geonode-mapstore-client/compare/2.0.2...2.0.3)
+
+<li> 2020-04-02: afabiani <a href="http://github.com/GeoNode/geonode-mapstore-client/commit/499fd6ad3fc06bc1a052bf7198916d47c252fba9" target="blank"> - Update MapStore to stable release v2020.01.01</a></li> 
+<li> 2020-04-02: afabiani <a href="http://github.com/GeoNode/geonode-mapstore-client/commit/0c7f832b723a8c5f7779609e6276d46835698f09" target="blank"> - Allow templates to inherit all properties form "defaultConfig"</a></li> 
+
 ## 2.0.2 [2020-03-09]
 
 ### Main features

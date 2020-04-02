@@ -27,8 +27,15 @@
         "showMore": "Montrer plus...",
         "collapse": "réduire",
         "expand": "étendre",
+        "Forbidden": "Interdit",
         "version": {
             "label": "Version"
+        },
+        "errorPage": {
+            "title":"Oups, quelque chose a mal tourné",
+            "subtitle":"Veuillez cliquer sur l'icône ci-dessous pour recharger MapStore",
+            "description":"Si vous souhaitez signaler cette erreur, vous pouvez envoyer un e-mail à notre liste de diffusion",
+            "descriptionAdmin":"Veuillez contacter l'administrateur"
         },
         "autorefresh": {
             "of": "de",
@@ -1622,7 +1629,9 @@
                     "notFound": "Tableau de bord introuvable",
                     "notAccessible": "Tableau de bord non accessible"
                 },
-                "resourceAlreadyExists": "Une ressource avec ce nom existe déjà"
+                "resourceAlreadyExists": "Une ressource avec ce nom existe déjà",
+                "forbidden": "Une erreur inattendue s'est produite (403 interdit). Veuillez contacter l'administrateur",
+                "forbidden405": "Une erreur inattendue s'est produite (405 interdit). Veuillez contacter l'administrateur"
             },
             "editor": {
                 "save": "Sauvegarder le tableau de bord",

@@ -27,8 +27,15 @@
         "showMore": "Show more...",
         "collapse": "Collapse",
         "expand": "Expand",
+        "Forbidden": "Forbidden",
         "version": {
             "label": "Version"
+        },
+        "errorPage": {
+            "title":"Ops, Something has gone wrong",
+            "subtitle":"Please click the icon below to reload MapStore",
+            "description":"If you want to report this error you can send an email our mailing list",
+            "descriptionAdmin":"Please contact the administrator"
         },
         "autorefresh": {
             "of": "of",
@@ -1623,7 +1630,9 @@
                     "notFound": "Dashboard not found",
 	                "notAccessible": "Dashboard not accessible"
                 },
-                "resourceAlreadyExists": "A resource with this name already exists"
+                "resourceAlreadyExists": "A resource with this name already exists",
+                "forbidden": "An unexpected error occured (403 Forbidden). Please contact the Administrator",
+                "forbidden405": "An unexpected error occured (405 Forbidden). Please contact the Administrator"
             },
             "editor": {
                 "save": "Save the dashboard",

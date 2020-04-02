@@ -9273,6 +9273,37 @@ structure .glyphicon-{iconName}-content
   color: #4d4d4d;
   border-bottom: 3px solid #3782c3;
 }
+.msgapi .error-container {
+  height: 100%;
+  width: 100%;
+}
+.msgapi .error-container .runtime-error-message {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  background-color: #dddddd;
+  color: #333333;
+  cursor: help;
+  display: grid;
+}
+.msgapi .error-container .runtime-error-message.inverse {
+  background-color: #333333;
+  color: #dddddd;
+}
+.msgapi .error-container .runtime-error-message p {
+  margin: 20px 0 20px;
+}
+.msgapi .error-container .runtime-error-message .exclamation-sign-icon {
+  font-size: 60px;
+}
+.msgapi .error-container .runtime-error-message .refresh-icon {
+  font-size: 20px;
+}
+.msgapi .error-container .runtime-error-message .refresh-icon:hover {
+  cursor: pointer;
+  color: #2c689c;
+}
 .msgapi .ag-fresh .ag-header,
 .msgapi .ag-fresh .ag-tool-panel-container {
   background: #2c689c !important;

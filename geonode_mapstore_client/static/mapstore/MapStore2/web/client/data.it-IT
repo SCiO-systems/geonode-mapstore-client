@@ -27,8 +27,15 @@
         "showMore": "Mostra altri...",
         "collapse": "Collassa",
         "expand": "Espandi",
+        "Forbidden": "Vietato",
         "version": {
             "label": "Versione"
+        },
+        "errorPage": {
+            "title":"Ops, Qualcosa è andato storto",
+            "subtitle":"Per favore clicca sull'icona qui sotto per ricaricare MapStore",
+            "description":"Se vuoi segnalare questo problema, puoi mandare una mail alla nostra lista email per utenti",
+            "descriptionAdmin":"Per favore contatta l'amministratore"
         },
         "autorefresh": {
             "of": "di",
@@ -1622,7 +1629,9 @@
                     "notFound": "Dashboard non trovata",
                     "notAccessible": "Dashboard non accessibile"
                 },
-                "resourceAlreadyExists": "Una risorsa con questo nome esiste già"
+                "resourceAlreadyExists": "Una risorsa con questo nome esiste già",
+                "forbidden": "Si è verificato un errore imprevisto (403 vietato). Si prega di contattare l'amministratore",
+                "forbidden405": "Si è verificato un errore imprevisto (405 vietato). Si prega di contattare l'amministratore"
             },
             "editor": {
                 "save": "Salva la dashboard",

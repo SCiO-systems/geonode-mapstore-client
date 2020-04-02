@@ -27,8 +27,15 @@
         "showMore": "Zeig mehr...",
         "collapse": "Kollabiert",
         "expand": "Erweitern",
+        "Forbidden": "Verboten",
         "version": {
             "label": "Version"
+        },
+        "errorPage": {
+            "title":"Ups, etwas ist schief gelaufen",
+            "subtitle":"Klicken Sie auf das Symbol unten, um MapStore neu zu laden",
+            "description":"Wenn Sie diesen Fehler melden möchten, können Sie eine E-Mail an unsere Mailingliste senden",
+            "descriptionAdmin":"Bitte wenden Sie sich an den Administrator"
         },
         "autorefresh": {
             "of": "of",
@@ -1622,7 +1629,9 @@
                     "notFound": "Dashboard nicht gefunden",
                     "notAccessible": "Dashboard nicht zugänglich"
                 },
-                "resourceAlreadyExists": "Eine Ressource mit diesem Namen existiert bereits"
+                "resourceAlreadyExists": "Eine Ressource mit diesem Namen existiert bereits",
+                "forbidden": "Ein unerwarteter Fehler ist aufgetreten (403 Verboten). Bitte wenden Sie sich an den Administrator",
+                "forbidden405": "Ein unerwarteter Fehler ist aufgetreten (405 Verboten). Bitte wenden Sie sich an den Administrator"
             },
             "editor": {
                 "save": "Speichern Sie das Dashboard",
