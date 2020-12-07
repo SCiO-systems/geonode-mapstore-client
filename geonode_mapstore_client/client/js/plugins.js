@@ -48,6 +48,8 @@ import SearchServicesConfigPlugin from '@mapstore/framework/plugins/SearchServic
 import SwipePlugin from '@mapstore/framework/plugins/Swipe';
 import LocatePlugin from '@mapstore/framework/plugins/Locate';
 
+import GeoNodeSummit2020Plugin from '@js/plugins/GeoNodeSummit2020';
+
 import SavePlugin from '@js/plugins/Save';
 import SaveAsPlugin from '@js/plugins/SaveAs';
 import SharePlugin from '@js/plugins/Share';
@@ -103,6 +105,7 @@ const pluginsDefinition = {
         SwipePlugin,
         LocatePlugin,
         SharePlugin,
+        GeoNodeSummit2020Plugin,
         AddReducersAndEpics: {
             reducers: {
                 security,

@@ -22,23 +22,6 @@ var MS2_BASE_PLUGINS = {
 				}
 			}
 		},
-		{
-			"name": "BackgroundSelector",
-			"cfg": {
-				"style": {
-					"bottom": 0,
-					"marginBottom": 25
-				},
-				"dimensions": {
-					"side": 65,
-					"sidePreview": 65,
-					"frame": 3,
-					"margin": 5,
-					"label": false,
-					"vertical": true,
-				}
-			}
-		},
 
 		{
 			"name": "Identify",

@@ -57,6 +57,7 @@ var MS2_EDIT_PLUGINS = {
 			"cfg": {
 				"disablePermission": true
 			}
-		}
+		},
+		{ "name": "GeoNodeSummit2020" }
 	]
 }
