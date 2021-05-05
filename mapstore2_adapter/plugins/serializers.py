@@ -10,6 +10,7 @@
 #########################################################################
 
 from __future__ import absolute_import
+from geonode.maps.models import MapData, Map
 
 from ..api.models import (MapStoreData,
                           MapStoreAttribute)
@@ -50,6 +51,14 @@ class GeoNodeSerializer(object):
             _data.resource = serializer.instance
             _data.blob = data
             _data.save()
+
+            #Saving blob olso on new map in geonode core
+            new_map = Map.objects.get(resourcebase_ptr=serializer.instance.id)
+            _mapdata, _ = MapData.objects.get_or_create(
+                resource=new_map)
+            _mapdata.blob = data
+            _mapdata.save()
+
             serializer.validated_data['data'] = _data
 
     @classmethod

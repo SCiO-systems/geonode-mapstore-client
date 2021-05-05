@@ -18,8 +18,8 @@ from oauth2_provider.contrib.rest_framework import OAuth2Authentication
 from geonode.base.api.permissions import IsOwnerOrReadOnly
 
 from .models import MapStoreResource
-from .serializers import (UserSerializer,
-                          MapStoreResourceSerializer,)
+from .serializers import UserSerializer
+from geonode.base.api.serializers import MapStoreResourceSerializer
 from ..hooks import hookset
 
 import logging
