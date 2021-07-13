@@ -7,8 +7,6 @@ on:
   # Triggers the workflow on push events but only for the master branch
   push:
     branches: [ github_actions_debug ]
-  pull_request:
-    branches: [ github_actions_debug ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
