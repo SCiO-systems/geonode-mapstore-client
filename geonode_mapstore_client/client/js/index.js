@@ -1,1 +1,1 @@
-// entry point of the package
+// entry point of the packages
