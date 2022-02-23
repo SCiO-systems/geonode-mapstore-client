@@ -1,5 +1,19 @@
 # Change Log
 
+## 3.3.1 [2022-02-23]
+
+### Backward Compatibility
+ - This release must be used with GeoNode 3.3.0 **only**
+
+<li> Mon Feb 14 18:28:26 2022 +0100: stefano bovio <a href=https://github.com/GeoNode/geonode-mapstore-client/commit/f9050f366d92c7b2653f389cb75ace2a3a39691e target=blank>[Backport 3.3.x][Fixes #828] Flickering of map widgets while using the get feature info  (#830)</a></li>
+<li> Mon Feb 7 21:04:31 2022 +0300: NAGGINDA MARTHA <a href=https://github.com/GeoNode/geonode-mapstore-client/commit/5c14e261b1b2a95c48e97a2450a060c6c4022ab8 target=blank>- [Fixes #802] Annotations added to a map are not displayed on map view (#803)</a></li>
+<li> Thu Feb 3 12:56:23 2022 +0100: mattiagiupponi <a href=https://github.com/GeoNode/geonode-mapstore-client/commit/ab08ce7499ea5df19c4b6e01efecb51d83233bf2 target=blank>Default extra metadata schema injected for Geostories and Dashboard (#783)</a></li>
+<li> Fri Jan 28 12:21:04 2022 +0100: stefano bovio <a href=https://github.com/GeoNode/geonode-mapstore-client/commit/7392ac9c4f7224002c607f9db446c4a2a3d7d6b6 target=blank>[Backport 3.3.x][Fixes #756] Timing issues with timeline histogram initialization (#761)</a></li>
+<li> Mon Jan 17 10:11:16 2022 +0100: Giovanni Allegri <a href=https://github.com/GeoNode/geonode-mapstore-client/commit/1cf0b7191c3e7aa0d1e0d0d030ba70d8bd1c4bd5 target=blank>Fixes #711 (#712)</a></li>
+<li> Tue Dec 21 18:18:50 2021 +0100: stefano bovio <a href=https://github.com/GeoNode/geonode-mapstore-client/commit/464b7b3c8cde9ff1f795912f20d2c8e79b63f6c5 target=blank>#666: GeoCarousel: improve hilighting of current item (#697)</a></li>
+<li> Tue Dec 21 16:44:04 2021 +0300: NAGGINDA MARTHA <a href=https://github.com/GeoNode/geonode-mapstore-client/commit/4321c0634d8940569a7ef50c2a667c22421ebb92 target=blank>[Fixes #560] View Geostory/Dashboard loggs KeyError (#660)</a></li>
+<li> Mon Dec 13 17:36:32 2021 +0300: NAGGINDA MARTHA <a href=https://github.com/GeoNode/geonode-mapstore-client/commit/bd50f74fbde8fc346619e5cb644a2f6b3063bf65 target=blank>[Fixes #621] Thumbnail url for Geoapps is returned as base64 instead of a URL to the static image (#622)</a></li>
+
 ## 3.3.0 [2021-11-24]
 
 ### Backward Compatibility
