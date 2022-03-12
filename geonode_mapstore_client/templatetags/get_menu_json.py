@@ -158,7 +158,7 @@ def get_user_menu(context):
 
     logout = {
         "type": "link",
-        "href": "/account/logout/?next=/",
+        "href": "/logout",
         "label": "Log out"
     }
 
