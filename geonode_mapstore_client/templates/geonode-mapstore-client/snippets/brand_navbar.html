@@ -2,6 +2,11 @@
 {% load get_menu_json %}
 {% load catalogue_urls %}
 {% get_user_menu as USER_MENU %}
+{% get_base_left_topbar_menu as BASE_TOPBAR_MENU_LEFT %}
+{% get_menu_json 'TOPBAR_MENU' as TOPBAR_MENU %}
+{% get_menu_json 'TOPBAR_MENU_LEFT' as TOPBAR_MENU_LEFT %}
+{% get_base_right_topbar_menu as BASE_TOPBAR_MENU_RIGHT %}
+{% get_menu_json 'TOPBAR_MENU_RIGHT' as TOPBAR_MENU_RIGHT %}
 
 {% block extra_style %}
 {% endblock %}
@@ -21,26 +26,39 @@
             margin: 8px;
         }
     }
-    button_container {
+    #button_container {
     	margin: 0 0 0 calc(10px * var(--mid));
     	flex-direction: column;
     }
-    button {
-    	display: block;
-    	cursor: pointer;
-   	outline: none;
-    	background-color: transparent;
-    	height: calc(30px * var(--mid));
-    	font-size: calc(14px * var(--mid));
-    	text-transform: none;
-    	border-radius: calc(60px * var(--mid));
-    	border-color: #1f5763;
-    	margin-top: calc(10px * var(--mid));
-    	color: #1f5763;
-    	font-weight: 300;
-    	min-width: 100%;
-    	border: solid calc(1px * var(--mid));
-    	width: calc(125px * var(--mid));
+    #navlink {
+	    color:#1f5763!important;
+	    border-bottom:calc(2px * var(--mid)) solid #1f5763;
+	    text-decoration:none;
+	    margin-right:calc(10px * var(--mid));
+	    text-align:center;
+	    width:100%;
+	    font-size:calc(16px * var(--mid));
+	    padding-bottom:calc(12px * var(--mid));
+	    color:#1f5763;
+	    font-weight:500;
+	    min-height:calc(46px * var(--mid))
+    }
+    #navbutton {
+	    display:block;
+	    cursor:pointer;
+	    outline:none;
+	    background-color:transparent;
+	    height:calc(30px * var(--mid));
+	    font-size:calc(14px * var(--mid));
+	    text-transform:none;
+	    border-radius:calc(60px * var(--mid));
+	    border-color:#1f5763;
+	    margin-top:calc(10px * var(--mid));
+	    color:#1f5763;
+	    font-weight:300;
+	    min-width:100%;
+	    border:solid calc(1px * var(--mid));
+	    width:calc(125px * var(--mid))
     }
 </style>
 
@@ -55,11 +73,54 @@
                             {% if custom_theme.logo and custom_theme.logo.url %}
                                 <img src="{{ custom_theme.logo.url }}">
                             {% else %}
-                                <img src="{% block logo_src %}/static/mapstore/img/cacip_logo_1.png{% endblock %}">
+                                <img width="270" height="84" src="{% block logo_src %}/static/mapstore/img/cacip_logo_1.jpg{% endblock %}">
                             {% endif %}
                         </a>
                     </li>
                 </ul>
+		<ul
+                        class="gn-menu-list"
+                        aria-labelledby="gn-topbar-small-menu"
+                    >
+                <div class="dropdown">
+                    <button
+                        class="btn btn-primary dropdown-toggle"
+                        type="button"
+                        id="gn-topbar-small-menu"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="true"
+                    >
+                        <i class="fa fa-bars"> </i>
+                    </button>
+                    <ul
+                        class="dropdown-menu"
+                        aria-labelledby="gn-topbar-small-menu"
+                    >
+                        {% for menu_item in BASE_TOPBAR_MENU_LEFT %}
+                            {% include './menu_item_compact.html' with menu_item=menu_item %}
+                        {% endfor %}
+                        {% for menu_item in TOPBAR_MENU %}
+                            {% include './menu_item_compact.html' with menu_item=menu_item variant='primary' %}
+                        {% endfor %}
+                        {% for menu_item in TOPBAR_MENU_LEFT %}
+                            {% include './menu_item_compact.html' with menu_item=menu_item %}
+                        {% endfor %}
+
+                    </ul>
+                </div>
+                <ul class="gn-menu-list">
+                    {% for menu_item in BASE_TOPBAR_MENU_LEFT %}
+                        {% include './menu_item.html' with menu_item=menu_item variant='primary' %}
+                    {% endfor %}
+                    {% for menu_item in TOPBAR_MENU %}
+                        {% include './menu_item.html' with menu_item=menu_item variant='primary' %}
+                    {% endfor %}
+                    {% for menu_item in TOPBAR_MENU_LEFT %}
+                        {% include './menu_item.html' with menu_item=menu_item variant='primary' %}
+                    {% endfor %}
+                </ul>
+                    </ul>
                 {% endblock %}
             </div>
             <div class="gn-menu-content-center">
@@ -69,11 +130,11 @@
             </div>
             <div class="gn-menu-content-right">
                 {% block right_menu %}
-                <ul class="">
-                    {% for menu_item in USER_MENU %}
-                        {% include './menu_item.html' with menu_item=menu_item align_right=True %}
-                    {% endfor %}
-                </ul>
+		{% block language_selector %}
+                    {% include './language_selector.html' with variant='primary' %}
+                {% endblock %}
+
+		<a id="sign-in" href="/login/auth0" target="" class="navbutton">Sign in</a>
                 {% endblock %}
             </div>
         </div>
