@@ -6,7 +6,7 @@
                 id={{ menu_item.label | slugify }}
                 href="{{ menu_item.href }}"
                 target="{{ menu_item.target }}"
-                class="navlink"
+                class="{{ menu_item.className }}"
             >
                 {% trans menu_item.label %}
             </a>
