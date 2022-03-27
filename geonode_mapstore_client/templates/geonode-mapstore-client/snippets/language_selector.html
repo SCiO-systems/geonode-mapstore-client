@@ -9,15 +9,17 @@
 </form>
 
     {% if inline %}
+        <li id="gn-language-selector-inline" class="gn-language-selector inline">
             {% for lang in LANGUAGES %}
                 <button
                     data-lang-code="{{lang.0}}"
                     data-lang-state="{% if lang.0 == LANGUAGE %}active{% else %}{% endif %}"
-                    class="navbutton {% if lang.0 == LANGUAGE %} active{% else %}{% endif %}"
+                    class="btn btn-primary {% if lang.0 == LANGUAGE %} active{% else %}{% endif %}"
                 >
                     {{lang.0}}
                 </button>
             {% endfor %}
+        </li>
         <script>
             (function() {
                 const languageForm = document.querySelector('#gn-language-selector-form');
@@ -40,6 +42,7 @@
         </script>
     {% else %}
 
+        <li class="gn-language-selector">
             
             <div class="dropdown" id="gn-language-selector-dropdown">
                 <button
@@ -48,7 +51,7 @@
                     aria-haspopup="true"
                     aria-expanded="false"
                     type="button"
-                    class="navbutton"
+                    class="dropdown-toggle btn btn-{{variant|default:'default'}}"
                     data-toggle="dropdown"
                 >
                     {{ lang_info.name_local }}
@@ -57,12 +60,13 @@
                     {% for lang in LANGUAGES %}
                         {% if lang.0 != LANGUAGE %} 
                             <li>
-                                <a class="navbutton" style="cursor:pointer;" data-lang-code="{{lang.0}}">{{ lang.1 }}</a>
+                                <a style="cursor:pointer;" data-lang-code="{{lang.0}}">{{ lang.1 }}</a>
                             </li>
                         {% endif %}
                     {% endfor %}
                 </ul>
             </div>
+        </li>
         <script>
             (function() {
                 const languageForm = document.querySelector('#gn-language-selector-form');
