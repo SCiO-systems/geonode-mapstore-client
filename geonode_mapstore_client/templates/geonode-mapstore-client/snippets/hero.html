@@ -21,11 +21,8 @@
     <div class="jumbotron">
         <div class="gn-hero-description">
             {% if not custom_theme.jumbotron_welcome_hide %}
-                {% with jumbotron_welcome_title=custom_theme.jumbotron_welcome_title|default:"GeoNode"|template_trans %}
-                <h1>{% trans jumbotron_welcome_title %}</h1>
-                {% endwith %}
-                {% with jumbotron_welcome_content=custom_theme.jumbotron_welcome_content|default:"sharing geospatial data and maps."|template_trans %}
-                <p>{% trans jumbotron_welcome_content %}</p>
+                {% with jumbotron_welcome_title=custom_theme.jumbotron_welcome_title|default:"CACIP Updates"|template_trans %}
+                <h3>{% trans jumbotron_welcome_title %}</h3>
                 {% endwith %}
             {% endif %}
         </div>
