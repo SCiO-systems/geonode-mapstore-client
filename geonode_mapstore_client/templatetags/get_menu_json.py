@@ -37,13 +37,7 @@ def get_base_left_topbar_menu(context):
                 {
                     "type": "link",
                     "href": "/catalogue/#/search/?f=dataset",
-                    "label": "Datasets",
-                    "className": "navbar_dropdown_item",
-                },
-                {
-                    "type": "link",
-                    "href": "/catalogue/#/search/?f=document",
-                    "label": "Documents",
+                    "label": "Layers",
                     "className": "navbar_dropdown_item",
                 },
                 {

@@ -69,11 +69,11 @@
                 {% block left_menu %}
                 <ul class="gn-menu-list">
                     <li>
-                        <a href="{% block logo_href %}{% catalogue_home %}{% endblock %}">
+                        <a href="/">
                             {% if custom_theme.logo and custom_theme.logo.url %}
                                 <img src="{{ custom_theme.logo.url }}">
                             {% else %}
-                                <img width="270" height="84" src="{% block logo_src %}/static/mapstore/img/cacip_logo_1.jpg{% endblock %}">
+                                <img width="270" height="84" src="{% block logo_src %}/static/mapstore/img/cacip_logo_2.png{% endblock %}">
                             {% endif %}
                         </a>
                     </li>
