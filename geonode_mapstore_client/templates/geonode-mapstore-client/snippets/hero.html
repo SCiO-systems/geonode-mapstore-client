@@ -21,7 +21,7 @@
     <div class="jumbotron">
         <div class="gn-hero-description">
             {% if not custom_theme.jumbotron_welcome_hide %}
-                {% with jumbotron_welcome_title=custom_theme.jumbotron_welcome_title|default:"CACIP Updates"|template_trans %}
+                {% with jumbotron_welcome_title=custom_theme.jumbotron_welcome_title|default:"CACIP Geospatial Data"|template_trans %}
                 <h3>{% trans jumbotron_welcome_title %}</h3>
                 {% endwith %}
             {% endif %}
