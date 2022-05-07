@@ -207,14 +207,6 @@
                             ]
                         },
                         {
-                            "id": "document",
-                            "labelId": "gnhome.documents",
-                            "type": "filter",
-                            "query": {
-                                "filter{resource_type.in}": "document"
-                            }
-                        },
-                        {
                             "id": "map",
                             "labelId": "gnhome.maps",
                             "type": "filter",
@@ -342,19 +334,6 @@
                             "value": "layer",
                             "type": "link",
                             "href": "/catalogue/#/upload/dataset",
-                            "authenticated": true,
-                            "perms": [
-                                {
-                                    "type": "user",
-                                    "value": "add_resource"
-                                }
-                            ]
-                        },
-                        {
-                            "labelId": "gnhome.uploadDocument",
-                            "value": "document",
-                            "type": "link",
-                            "href": "/catalogue/#/upload/document",
                             "authenticated": true,
                             "perms": [
                                 {
