@@ -98,7 +98,6 @@
             "geoServer": "GeoServer",
             "help": "Help",
             "uploadLayer": "Upload dataset",
-            "uploadDocument": "Upload document",
             "addRemoteService": "Add remote service",
             "exploreMaps": "Explore maps",
             "createMap": "Create map",

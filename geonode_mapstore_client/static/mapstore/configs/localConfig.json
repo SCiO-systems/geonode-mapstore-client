@@ -351,19 +351,6 @@
                             ]
                         },
                         {
-                            "labelId": "gnhome.uploadDocument",
-                            "value": "document",
-                            "type": "link",
-                            "href": "/catalogue/#/upload/document",
-                            "authenticated": true,
-                            "perms": [
-                                {
-                                    "type": "user",
-                                    "value": "add_resource"
-                                }
-                            ]
-                        },
-                        {
                             "labelId": "gnhome.createDataset",
                             "value": "layer",
                             "type": "link",

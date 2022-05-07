@@ -44,12 +44,6 @@ const Item = {
         },
         {
             "type": "link",
-            "href": "/documents/upload",
-            "labelId": "gnhome.uploadDocument",
-            "authenticated": true
-        },
-        {
-            "type": "link",
             "href": "/services/register/",
             "labelId": "gnhome.addRemoteService",
             "authenticated": true,
