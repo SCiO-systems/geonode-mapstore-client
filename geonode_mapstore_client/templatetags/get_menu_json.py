@@ -15,11 +15,13 @@ def _handle_single_item(menu_item):
         m_item['target'] = '_blank'
     return m_item
 
+
 def _is_mobile_device(context):
     if context and 'request' in context:
         req = context['request']
         return req.user_agent.is_mobile
     return False
+
 
 @register.simple_tag(takes_context=True)
 def get_base_left_topbar_menu(context):
@@ -30,43 +32,45 @@ def get_base_left_topbar_menu(context):
         {
             "label": "Data",
             "type": "dropdown",
+            "className": "navbar_dropdown",
             "items": [
                 {
                     "type": "link",
                     "href": "/catalogue/#/search/?f=dataset",
-                    "label": "Datasets"
-                },
-                {
-                    "type": "link",
-                    "href": "/catalogue/#/search/?f=document",
-                    "label": "Documents"
+                    "label": "Layers",
+                    "className": "navbar_dropdown_item",
                 },
                 {
                     "type": "link",
                     "href": "/services/?limit=5",
-                    "label": "Remote Services"
+                    "label": "Remote Services",
+                    "className": "navbar_dropdown_item",
                 } if not is_mobile else None
             ]
         },
         {
             "type": "link",
             "href": "/catalogue/#/search/?f=map",
-            "label": "Maps"
+            "label": "Maps",
+            "className": "navbar_item",
         },
         {
             "type": "link",
             "href": "/catalogue/#/search/?f=geostory",
-            "label": "GeoStories"
+            "label": "GeoStories",
+            "className": "navbar_item",
         },
         {
             "type": "link",
             "href": "/catalogue/#/search/?f=dashboard",
-            "label": "Dashboards"
+            "label": "Dashboards",
+            "className": "navbar_item",
         },
         {
             "type": "link",
             "href": "/catalogue/#/search/?f=featured",
-            "label": "Featured"
+            "label": "Featured",
+            "className": "navbar_item",
         }
     ]
 
@@ -134,14 +138,10 @@ def get_user_menu(context):
     if not user.is_authenticated:
         return [
             {
-                "label": "Register",
-                "type": "link",
-                "href": "/login/auth0"
-            } if settings.ACCOUNT_OPEN_SIGNUP and not Configuration.load().read_only else None,
-            {
                 "label": "Sign in",
                 "type": "link",
-                "href": "/login/auth0"
+                "href": "/login/auth0",
+                "className": "sign_in",
             },
         ]
 

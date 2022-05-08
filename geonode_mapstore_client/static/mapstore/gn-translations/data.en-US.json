@@ -97,7 +97,6 @@
             "geoServer": "GeoServer",
             "help": "Help",
             "uploadLayer": "Upload dataset",
-            "uploadDocument": "Upload document",
             "addRemoteService": "Add remote service",
             "exploreMaps": "Explore maps",
             "createMap": "Create map",
@@ -123,8 +122,8 @@
             "unpublished": "Unpublished",
             "unApprovedunPublished": "This resource is unpublished and not approved",
             "featuredList": "Featured",
-            "uploadDataset": "Upload dataset",
-            "createDataset": "Create dataset",
+            "uploadDataset": "Upload layer",
+            "createDataset": "Create layer",
             "search": "Search...",
             "permissionsMissing": "You don't have permission to view or download the resource",
             "filter": "Filter"
@@ -263,7 +262,7 @@
             "unsupportedFiles": "Files not supported for the upload",
             "upload": "Upload",
 
-            "uploadDataset": "Upload a dataset",
+            "uploadDataset": "Upload a layer",
             "dragAndDropFile": "Drag and drop a file to upload",
             "filterPendingUploadDataset": "Filter pending uploads by name...",
             "filterNoMatchUploadDataset": "Filter does not match a pending upload",

@@ -2,6 +2,11 @@
 {% load get_menu_json %}
 {% load catalogue_urls %}
 {% get_user_menu as USER_MENU %}
+{% get_base_left_topbar_menu as BASE_TOPBAR_MENU_LEFT %}
+{% get_menu_json 'TOPBAR_MENU' as TOPBAR_MENU %}
+{% get_menu_json 'TOPBAR_MENU_LEFT' as TOPBAR_MENU_LEFT %}
+{% get_base_right_topbar_menu as BASE_TOPBAR_MENU_RIGHT %}
+{% get_menu_json 'TOPBAR_MENU_RIGHT' as TOPBAR_MENU_RIGHT %}
 
 {% block extra_style %}
 {% endblock %}
@@ -21,6 +26,40 @@
             margin: 8px;
         }
     }
+    #button_container {
+    	margin: 0 0 0 calc(10px * var(--mid));
+    	flex-direction: column;
+    }
+    #navlink {
+	    color:#1f5763!important;
+	    border-bottom:calc(2px * var(--mid)) solid #1f5763;
+	    text-decoration:none;
+	    margin-right:calc(10px * var(--mid));
+	    text-align:center;
+	    width:100%;
+	    font-size:calc(16px * var(--mid));
+	    padding-bottom:calc(12px * var(--mid));
+	    color:#1f5763;
+	    font-weight:500;
+	    min-height:calc(46px * var(--mid))
+    }
+    #navbutton {
+	    display:block;
+	    cursor:pointer;
+	    outline:none;
+	    background-color:transparent;
+	    height:calc(30px * var(--mid));
+	    font-size:calc(14px * var(--mid));
+	    text-transform:none;
+	    border-radius:calc(60px * var(--mid));
+	    border-color:#1f5763;
+	    margin-top:calc(10px * var(--mid));
+	    color:#1f5763;
+	    font-weight:300;
+	    min-width:100%;
+	    border:solid calc(1px * var(--mid));
+	    width:calc(125px * var(--mid))
+    }
 </style>
 
 <nav id="{{ id|default:'' }}" class="gn-menu gn-menu-symmetric">
@@ -30,15 +69,31 @@
                 {% block left_menu %}
                 <ul class="gn-menu-list">
                     <li>
-                        <a href="{% block logo_href %}{% catalogue_home %}{% endblock %}">
+                        <a href="/">
                             {% if custom_theme.logo and custom_theme.logo.url %}
                                 <img src="{{ custom_theme.logo.url }}">
                             {% else %}
-                                <img src="{% block logo_src %}/static/mapstore/img/geonode-logo.svg{% endblock %}">
+                                <img width="270" height="84" src="{% block logo_src %}/static/mapstore/img/cacip_logo_2.png{% endblock %}">
                             {% endif %}
                         </a>
                     </li>
                 </ul>
+		<ul
+                        class="gn-menu-list"
+                        aria-labelledby="gn-topbar-small-menu"
+                    >
+                <ul class="gn-menu-list">
+                    {% for menu_item in BASE_TOPBAR_MENU_LEFT %}
+                        {% include './menu_item.html' with menu_item=menu_item variant='primary' %}
+                    {% endfor %}
+                    {% for menu_item in TOPBAR_MENU %}
+                        {% include './menu_item.html' with menu_item=menu_item variant='primary' %}
+                    {% endfor %}
+                    {% for menu_item in TOPBAR_MENU_LEFT %}
+                        {% include './menu_item.html' with menu_item=menu_item variant='primary' %}
+                    {% endfor %}
+                </ul>
+                    </ul>
                 {% endblock %}
             </div>
             <div class="gn-menu-content-center">
@@ -47,8 +102,15 @@
                 {% endblock %}
             </div>
             <div class="gn-menu-content-right">
+                <div class="ast-search-icon"><a class="full-screen astra-search-icon" aria-label="Search icon link" href="#"><span class="ast-icon icon-search"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="-888 480 142 142" enable-background="new -888 480 142 142" xml:space="preserve">
+<path d="M-787.4,568.7h-6.3l-2.4-2.4c7.9-8.7,12.6-20.5,12.6-33.1c0-28.4-22.9-51.3-51.3-51.3  c-28.4,0-51.3,22.9-51.3,51.3c0,28.4,22.9,51.3,51.3,51.3c12.6,0,24.4-4.7,33.1-12.6l2.4,2.4v6.3l39.4,39.4l11.8-11.8L-787.4,568.7  L-787.4,568.7z M-834.7,568.7c-19.7,0-35.5-15.8-35.5-35.5c0-19.7,15.8-35.5,35.5-35.5c19.7,0,35.5,15.8,35.5,35.5  C-799.3,553-815,568.7-834.7,568.7L-834.7,568.7z"></path>
+</svg></span></a></div>
                 {% block right_menu %}
-                <ul class="gn-menu-list">
+		{% block language_selector %}
+                    {% include './language_selector.html' with variant='primary' %}
+                {% endblock %}
+
+		         <ul class="gn-menu-list">
                     {% for menu_item in USER_MENU %}
                         {% include './menu_item.html' with menu_item=menu_item align_right=True %}
                     {% endfor %}
