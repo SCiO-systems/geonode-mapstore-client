@@ -207,14 +207,6 @@
                             ]
                         },
                         {
-                            "id": "document",
-                            "labelId": "gnhome.documents",
-                            "type": "filter",
-                            "query": {
-                                "filter{resource_type.in}": "document"
-                            }
-                        },
-                        {
                             "id": "map",
                             "labelId": "gnhome.maps",
                             "type": "filter",

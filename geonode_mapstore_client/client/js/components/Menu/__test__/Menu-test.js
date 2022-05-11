@@ -22,12 +22,6 @@ const MenuConf = {
                     "href": "/layers/?limit=5",
                     "labelId": "gnhome.layers",
                     "badge": "${datasetsTotalCount}"
-                },
-                {
-                    "type": "link",
-                    "href": "/documents/?limit=5",
-                    "labelId": "gnhome.documents",
-                    "badge": "${documentsTotalCount}"
                 }
             ]
         },
