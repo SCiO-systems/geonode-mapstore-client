@@ -35,14 +35,6 @@ const conf = {
                 },
                 {
                     "type": "link",
-                    "href": "/documents/?limit=5",
-                    "labelId": "gnhome.documents",
-                    "badge": 1,
-                    "permissions": [],
-                    "allowedRoles": []
-                },
-                {
-                    "type": "link",
                     "href": "/services/?limit=5",
                     "labelId": "gnhome.remoteServices",
                     "permissions": [],
@@ -124,14 +116,6 @@ const conf = {
                     "type": "link",
                     "href": "/layers/?limit=5",
                     "labelId": "gnhome.layers",
-                    "badge": 1,
-                    "permissions": [],
-                    "allowedRoles": []
-                },
-                {
-                    "type": "link",
-                    "href": "/documents/?limit=5",
-                    "labelId": "gnhome.documents",
                     "badge": 1,
                     "permissions": [],
                     "allowedRoles": []

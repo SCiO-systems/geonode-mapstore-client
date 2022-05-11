@@ -23,12 +23,6 @@ const Item = {
         },
         {
             "type": "link",
-            "href": "/documents/?limit=5",
-            "labelId": "gnhome.documents",
-            "badge": "${documentsTotalCount}"
-        },
-        {
-            "type": "link",
             "href": "/services/?limit=5",
             "labelId": "gnhome.remoteServices"
         },
